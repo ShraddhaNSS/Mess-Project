@@ -1,5 +1,17 @@
-import { Stack } from "expo-router";
+// app/_layout.tsx
+import { Stack } from 'expo-router';
+import { AuthProvider } from '../auth/auth';
 
 export default function RootLayout() {
-  return <Stack />;
+  return (
+    <AuthProvider>
+      <Stack>
+        <Stack.Screen name="index" options={{ title: 'Home', headerShown: false }} />
+        <Stack.Screen name="signin" options={{ title: 'Sign In' }} />
+        <Stack.Screen name="signup" options={{ title: 'Sign Up' }} />
+        <Stack.Screen name="messList" options={{ title: 'Mess List' }} />
+      </Stack>
+    </AuthProvider>
+  );
 }
+//
