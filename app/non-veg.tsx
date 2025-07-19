@@ -72,7 +72,7 @@ export default function MessList() {
         </View>
         <TouchableOpacity 
           style={styles.bookButton}
-          onPress={() => handleBookMess(item.name)}
+          onPress={() => handleBookMess(item)}
         >
           <Text style={styles.bookButtonText}>Book Now</Text>
         </TouchableOpacity>
